@@ -4,11 +4,9 @@
 
 #ifndef HERENCIA_PERSONA_H
 #define HERENCIA_PERSONA_H
-#ifndef HERENCIA_PERSONA_H
-#define HERENCIA_PERSONA_H
 
 
-include <iostream>
+#include <Iostream>
 #include <string>
 
 class persona {
@@ -47,5 +45,5 @@ private:
 
 
 
-#endif //HERENCIA_PERSONA_H
-#endif //HERENCIA_PERSONA_H
+#endif HERENCIA_PERSONA_H
+

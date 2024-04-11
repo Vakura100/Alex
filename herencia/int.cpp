@@ -58,8 +58,7 @@ IntCell &IntCell::operator/ (IntCell &rhs){
     this->value = rhs.value;
     return *this;
     }
-
-     @@ -58,7 +58,7 @@ IntCell &IntCell::operator/ (int i){
+    IntCell &IntCell::operator/ (int i){
         this->value = i;
         return *this;
     }

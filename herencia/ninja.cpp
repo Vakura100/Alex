@@ -6,7 +6,7 @@ ninja::ninja(std::string gender, std::string name, int age, float height, float 
     this-> nvlChakra = nvlChakra;
 }
 
-ninja::ninja(const ninja &rhs):persona(rhs){
+ ninja::ninja(const ninja &rhs):persona(rhs){
     aldea = rhs.aldea;
     tChakra = rhs.tChakra;
     nvlChakra = rhs.nvlChakra;
