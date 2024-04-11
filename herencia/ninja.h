@@ -15,11 +15,9 @@ public:
     ninja(std::string gender, std::string name, int age, float height, float weight, std::string aldea,
           std::string tChakra, int nvlChakra);
 
-
+    ninja(const ninja& ninja);
 
     ~ninja() = default;
-
-
 
 
     std::string getAldea() const;

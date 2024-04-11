@@ -7,7 +7,7 @@ persona::persona(const persona &rhs){
     height = rhs.height;
     weight = rhs.weight;
 
-};
+}
 
 persona::persona(std::string gender, std::string name, int age, float height, float weight){
     this-> gender = gender;
@@ -15,7 +15,7 @@ persona::persona(std::string gender, std::string name, int age, float height, fl
     this-> age = age;
     this-> height = height;
     this-> weight = weight;
-};
+}
 
 std::string persona::getGender() const {
     return gender;
