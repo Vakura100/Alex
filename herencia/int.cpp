@@ -1,5 +1,8 @@
+//
+// Created by memop on 12/04/2024.
+//
 
-
+#include "int.h"
 #include "int.h"
 //Constructor Implícito
 IntCell::IntCell(){
@@ -57,19 +60,19 @@ IntCell &IntCell::operator* (int i){
 IntCell &IntCell::operator/ (IntCell &rhs){
     this->value = rhs.value;
     return *this;
-    }
-    IntCell &IntCell::operator/ (int i){
-        this->value = i;
-        return *this;
-    }
+}
+IntCell &IntCell::operator/ (int i){
+    this->value = i;
+    return *this;
+}
 
 //Sobrecarga de operador %
-    IntCell &IntCell::operator% (IntCell &rhs){
-        this->value = rhs.value;
-        return *this;
+IntCell &IntCell::operator% (IntCell &rhs){
+    this->value = rhs.value;
+    return *this;
 
-    }
-    IntCell &IntCell::operator% (int i) {
-        this->value = i;
-        return *this;
-    }
+}
+IntCell &IntCell::operator% (int i) {
+    this->value = i;
+    return *this;
+}

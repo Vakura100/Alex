@@ -1,5 +1,6 @@
 
-#include "Zanin.h"
+#include "zanin.h"
+#include "zanin.h"
 #include "ninja.h"
 
 zanin::zanin(std::string gender, std::string name, int age, float height, float weight, std::string aldea, std::string tChakra, int nvlChakra){

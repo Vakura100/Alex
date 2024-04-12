@@ -1,9 +1,5 @@
-//
-// Created by Alumnos on 11/04/2024.
-//
-
-#ifndef ALEX_INT_H
-#define ALEX_INT_H
+#ifndef HERENCIA_INT_H
+#define HERENCIA_INT_H
 
 
 class IntCell {
@@ -48,4 +44,4 @@ private:
     int value;
 };
 
-#endif //ALEX_INT_H
+#endif //HERENCIA_INT_H

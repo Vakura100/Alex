@@ -1,5 +1,4 @@
 
-
 #ifndef HERENCIA_NINJA_H
 #define HERENCIA_NINJA_H
 
@@ -36,4 +35,4 @@ private:
     int nvlChakra;
 };
 
-#endif //HERENCIA_NINJA_H
+#endif HERENCIA_NINJA_H

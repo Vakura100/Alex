@@ -1,3 +1,7 @@
+
+
+#include "ninja.h"
+#include "ninja.h"
 #include "ninja.h"
 
 ninja::ninja(std::string gender, std::string name, int age, float height, float weight, std::string aldea, std::string tChakra, int nvlChakra){
@@ -6,7 +10,7 @@ ninja::ninja(std::string gender, std::string name, int age, float height, float 
     this-> nvlChakra = nvlChakra;
 }
 
- ninja::ninja(const ninja &rhs):persona(rhs){
+ninja::ninja(const ninja &rhs):persona(rhs){
     aldea = rhs.aldea;
     tChakra = rhs.tChakra;
     nvlChakra = rhs.nvlChakra;

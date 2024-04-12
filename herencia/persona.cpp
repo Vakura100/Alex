@@ -1,3 +1,6 @@
+
+
+#include "persona.h"
 #include "persona.h"
 
 persona::persona(const persona &rhs){

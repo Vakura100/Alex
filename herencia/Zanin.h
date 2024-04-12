@@ -1,5 +1,3 @@
-
-
 #ifndef HERENCIA_ZANIN_H
 #define HERENCIA_ZANIN_H
 
@@ -13,7 +11,7 @@ public:
     zanin();
     zanin(int edad,float height,float weight,std::string bloodtype,std::string);
 
-   zanin(std::string gender, std::string name, int age, float height, float weight, std::string aldea,
+    zanin(std::string gender, std::string name, int age, float height, float weight, std::string aldea,
           std::string tChakra, int nvlChakra);
 
     zanin(const zanin& zanin);
@@ -38,4 +36,4 @@ private:
 };
 
 
-#endif //HERENCIA_ZANIN_H
+#endif HERENCIA_ZANIN_H

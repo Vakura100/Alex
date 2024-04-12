@@ -1,3 +1,0 @@
-C:/Users/Alumnos/CLionProjects/Alex/herencia/cmake-build-debug/CMakeFiles/herencia.dir
-C:/Users/Alumnos/CLionProjects/Alex/herencia/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Alumnos/CLionProjects/Alex/herencia/cmake-build-debug/CMakeFiles/rebuild_cache.dir
