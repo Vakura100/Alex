@@ -1,38 +1,30 @@
+#include "Coche.h"
 #include <iostream>
+#include "Float.h"
 #include <string>
-
-
-class Coche{
-public:
-    std::string Marca;
-    std::string Modelo;
-    int Anio;
-    double Kilometraje;
-    std::string Duenio;
-    std::string Color;
-
-};
 
 int main() {
 
-    Coche coche1;
-    coche1.Marca = "Ford";
-    coche1.Modelo = "Fiesta";
-    coche1.Anio = 2010;
-    coche1.Color = "Rojo";
-    coche1.Duenio = "Juan";
+    int a,b,c,d,e,f;
 
-    Coche coche2;
-    coche2.Marca = "Chevrolet";
-    coche2.Modelo = "Camaro";
-    coche2.Anio = 2015;
-    coche2.Color = "azul";
-    coche2.Duenio = "Pepe";
+    std::cout << &a << " " << &b << " " << &c << " " << std::endl;
 
-    std::cout << "Su Marca es " << coche1.Marca << std::endl;
-    std::cout << "Su Modelo es " << coche1.Modelo << std::endl;
-    std::cout << "Su Anio es " << coche1.Anio << std::endl;
-    std::cout << "Su Color es " << coche1.Color << std::endl;
-    std::cout << "El Duenio es " << coche1.Duenio << std::endl;
+    Coche c1{};
+    Coche c2("Ford", "Elpepe", "Yaris", 2005, 2000);
+    Coche c3;
+
+    c2 = c3;
+
+    c1.Imprimir();
+    c2.Imprimir();
+    c3.Imprimir();
+
+    FloatCell d1{};
+    FloatCell d2(17);
+
+
+
+
+
     return 0;
 }

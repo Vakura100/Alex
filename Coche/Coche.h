@@ -6,30 +6,39 @@
 #define ALEX_COCHE_H
 
 
+#include <iostream>
+#include <string>
+
 class Coche {
+
 public:
 
-//Constructor Predeterminado
-    Coche() = default;
+    Coche() = default;//Default constructor
+    Coche(const Coche &automobil);// Copy constructor
+    Coche(std::string marca, std::string duenio, std::string modelo, int anio, float kilometraje);//Parameters    constructor
+    ~Coche default;//Destructor
 
-// Copia de constructor
-    Coche(const Coche &rhs);
+    Coche &operator= (const Coche &rhs);
 
-// Constructor de referencia
-    Coche(Coche &&rhs) noexcept;
-
-//Destructor
-    ~Coche() = default;
-
-
-    int getValue() const;
-
-    void setValue(int newValue);
+    void Imprimir(){
+        std::cout << "Marca: " << marca << std::endl;
+        std::cout << "Duenio: " << duenio << std::endl;
+        std::cout << "Modelo: " << modelo << std::endl;
+        std::cout << "Anio: " << anio << std::endl;
+        std::cout << "Km: " << kilometraje << std::endl;
+    };
 
 private:
-    int storedValue{};
+    std::string marca;
+    std::string duenio;
+    std::string modelo;
+
+    int anio;
+    float kilometraje;
 
 };
+
+
 #endif //Alex_COCHE_H
 
 
