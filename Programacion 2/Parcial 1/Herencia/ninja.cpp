@@ -13,7 +13,7 @@ ninja::ninja(const ninja &rhs):persona(rhs){
     tChakra = rhs.tChakra;
     nvlChakra = rhs.nvlChakra;
 }
-
+l
 std::string ninja::getAldea() const {
     return aldea;
 }
