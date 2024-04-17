@@ -1,8 +1,7 @@
 
 
 #include "ninja.h"
-#include "ninja.h"
-#include "ninja.h"
+
 
 ninja::ninja(std::string gender, std::string name, int age, float height, float weight, std::string aldea, std::string tChakra, int nvlChakra){
     this-> aldea = aldea;
