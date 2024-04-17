@@ -4,58 +4,25 @@
 #define HERENCIA_BOOLEANO_H
 
 
-class Booleano {
 
+    class Booleano {
+    private:
+        bool value;
 
-public:
+    public:
+        Booleano();  // Constructor predeterminado
+        explicit Booleano(bool value);  // Constructor con un valor inicial
+        Booleano(const Booleano &rhs);  // Constructor de copia
 
-    Booleano();//Default constructor
-    Booleano(const Booleano &booleano);// Copy constructor
-    explicit Booleano(bool value);//Parameters constructor
-    ~Booleano() = default;//Destructor
+        // Sobrecarga de operadores
+        Booleano &operator=(const Booleano &rhs);
+        Booleano &operator=(bool i);
+        bool operator==(const Booleano &rhs) const;
+        bool operator==(bool i) const;
+        bool operator!=(const Booleano &rhs) const;
+        bool operator!=(bool i) const;
+    };
 
-//Operadores de asignación =
-    Booleano &operator= (const Booleano &rhs);
-    Booleano &operator= (bool i);
-//Operadores de asignación +
-    Booleano &operator+ (const Booleano &rhs);
-    Booleano &operator+ (bool i);
-//Operadores de asignación -
-    Booleano &operator- (const Booleano &rhs);
-    Booleano &operator- (bool i);
-//Operadores de asignación *
-    Booleano &operator* (Booleano &rhs);
-    Booleano &operator* (bool i);
-//Operadores de asignación /
-    Booleano &operator/ (Booleano &rhs);
-    Booleano &operator/ (bool i);
-//Operadores de asignación %
-    Booleano &operator% (Booleano &rhs);
-    Booleano &operator% (bool i);
-//Operadores de comparacion ">,<,==,=>,=<,!="
-    Booleano &operator> (Booleano &rhs);
-    Booleano &operator> (bool i);
-
-    Booleano &operator< (Booleano &rhs);
-    Booleano &operator< (bool i);
-
-    Booleano &operator== (Booleano &rhs);
-    Booleano &operator== (bool i);
-
-    Booleano &operator>= (Booleano &rhs);
-    Booleano &operator>= (bool i);
-
-    Booleano &operator<= (Booleano &rhs);
-    Booleano &operator<= (bool i);
-
-    Booleano &operator!= (Booleano &rhs);
-    Booleano &operator!= (bool i);
-
-private:
-
-    bool value;
-
-};
 
 
 #endif //HERENCIA_BOOLEANO_H

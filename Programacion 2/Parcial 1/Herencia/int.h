@@ -2,46 +2,45 @@
 #define HERENCIA_INT_H
 
 
-class IntCell {
+class Int {
 public:
-    IntCell();//Default constructor
-    IntCell(const IntCell &intCell);// Copy constructor
-    IntCell(int value);//Parameters constructor
-    ~IntCell() = default;//Destructor
+    Int();//Default constructor
+    Int(const Int &Int);// Copy constructor
+    Int(int value);//Parameters constructor
+    ~Int() = default;//Destructor
 
     // Operadores de asignación =
 
-    IntCell&operator=(const IntCell &rhs);
+    Int&operator=(const Int &rhs);
 
-    IntCell &operator=(int i);
+    Int &operator=(int i);
 
 //Operadores de asignación +
-    IntCell &operator+(const IntCell &rhs);
+    Int &operator+(const Int &rhs);
 
-    IntCell &operator+(int i);
+    Int &operator+(int i);
 
 //Operadores de asignación -
-    IntCell &operator-(const IntCell &rhs);
+    Int &operator-(const Int &rhs);
 
-    IntCell &operator-(int i);
+    Int &operator-(int i);
 
 //Operadores de asignación *
-    IntCell &operator*(IntCell &rhs);
+    Int &operator*(Int &rhs);
 
-    IntCell &operator*(int i);
+    Int &operator*(int i);
 
 //Operadores de asignación /
-    IntCell &operator/(IntCell &rhs);
+    Int &operator/(Int &rhs);
 
-    IntCell &operator/(int i);
+    Int &operator/(int i);
 
 //Operadores de asignación %
-    IntCell &operator%(IntCell &rhs);
+    Int &operator%(Int &rhs);
 
-    IntCell &operator%(int i);
+    Int &operator%(int i);
 
-private:
-    int value;
+
 };
 
 #endif //HERENCIA_INT_H

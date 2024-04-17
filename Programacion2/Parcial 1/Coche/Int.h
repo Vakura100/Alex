@@ -1,62 +1,56 @@
 
 
-#ifndef HERENCIA_INT_H
-#define HERENCIA_INT_H
+#ifndef COCHE_INT_H
+#define COCHE_INT_H
 
 
-class Int {
-
-};class IntCell {
+class IntCell {
+private:
+    int value;
 
 public:
+    // Constructores
+    IntCell();                // Constructor predeterminado
+    explicit IntCell(int value);       // Constructor con un valor inicial
+    IntCell(const IntCell &rhs);  // Constructor de copia
 
-    IntCell();//Default constructor
-    IntCell(const IntCell &intCell);// Copy constructor
-    explicit IntCell(int value);//Parameters constructor
-    ~IntCell() = default;//Destructor
+    // Destructor
+    ~IntCell() = default;
 
-//Operadores de asignación =
-    IntCell &operator= (const IntCell &rhs);
-    IntCell &operator= (int i);
-//Operadores de asignación +
-    IntCell &operator+ (const IntCell &rhs);
-    IntCell &operator+ (int i);
-//Operadores de asignación -
-    IntCell &operator- (const IntCell &rhs);
-    IntCell &operator- (int i);
-//Operadores de asignación *
-    IntCell &operator* (IntCell &rhs);
-    IntCell &operator* (int i);
-//Operadores de asignación /
-    IntCell &operator/ (IntCell &rhs);
-    IntCell &operator/ (int i);
-//Operadores de asignación %
-    IntCell &operator% (IntCell &rhs);
-    IntCell &operator% (int i);
-//Operadores de comparacion ">,<,==,=>,=<,!="
-    IntCell &operator> (IntCell &rhs);
-    IntCell &operator> (bool i);
+    // Operador de asignación
+    IntCell &operator=(const IntCell &rhs);
+    IntCell &operator=(int i);
 
-    IntCell &operator< (IntCell &rhs);
-    IntCell &operator< (bool i);
+    // Operadores aritméticos
+    IntCell &operator+(const IntCell &rhs);
+    IntCell &operator+(int i);
+    IntCell &operator-(const IntCell &rhs);
+    IntCell &operator-(int i);
+    IntCell &operator*(const IntCell &rhs);
+    IntCell &operator*(int i);
+    IntCell &operator/(const IntCell &rhs);
+    IntCell &operator/(int i);
+    IntCell &operator%(const IntCell &rhs);
+    IntCell &operator%(int i);
 
-    IntCell &operator== (IntCell &rhs);
-    IntCell &operator== (bool i);
+    // Operadores de comparación
+    bool operator>(const IntCell &rhs) const;
+    bool operator>(int i) const;
+    bool operator<(const IntCell &rhs) const;
+    bool operator<(int i) const;
+    bool operator==(const IntCell &rhs) const;
+    bool operator==(int i) const;
+    bool operator>=(const IntCell &rhs) const;
+    bool operator>=(int i) const;
+    bool operator<=(const IntCell &rhs) const;
+    bool operator<=(int i) const;
+    bool operator!=(const IntCell &rhs) const;
+    bool operator!=(int i) const;
 
-    IntCell &operator>= (IntCell &rhs);
-    IntCell &operator>= (bool i);
 
-    IntCell &operator<= (IntCell &rhs);
-    IntCell &operator<= (bool i);
 
-    IntCell &operator!= (IntCell &rhs);
-    IntCell &operator!= (bool i);
-
-private:
-
-    int value;
 
 };
 
 
-#endif //HERENCIA_INT_H
+#endif //COCHE_INT_H

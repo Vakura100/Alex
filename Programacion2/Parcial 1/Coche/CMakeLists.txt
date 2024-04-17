@@ -18,6 +18,5 @@ add_executable(Coche
         Float.h
         Int.cpp
         Int.h
-        Intcell.cpp
-        Intcell.h
-        main.cpp)
+        main.cpp
+)

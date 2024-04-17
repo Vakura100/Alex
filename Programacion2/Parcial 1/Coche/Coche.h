@@ -1,45 +1,38 @@
-//
-// Created by Alumnos on 19/03/2024.
-//
-
-#ifndef ALEX_COCHE_H
-#define ALEX_COCHE_H
 
 
-#include <iostream>
+#ifndef COCHE_H
+#define COCHE_H
+
+#include <string>
+
 #include <string>
 
 class Coche {
-
 public:
+    // Constructores
+    Coche() = default; // Constructor predeterminado
+    Coche(const Coche &rhs); // Constructor de copia
+    Coche(Coche &&rhs); // Constructor de movimiento
+    Coche(std::string marca, std::string duenio, std::string modelo, int anio, float kilometraje); // Constructor con parámetros
+    ~Coche() = default; // Destructor
 
-    Coche() = default;//Default constructor
-    Coche(const Coche &automobil);// Copy constructor
-    Coche(std::string marca, std::string duenio, std::string modelo, int anio, float kilometraje);//Parameters    constructor
-    ~Coche() = default; //Destructor
+    // Sobrecarga de operadores
+    Coche &operator=(const Coche &rhs);
 
-    Coche &operator= (const Coche &rhs);
-
-    void Imprimir(){
-        std::cout << "Marca: " << marca << std::endl;
-        std::cout << "Duenio: " << duenio << std::endl;
-        std::cout << "Modelo: " << modelo << std::endl;
-        std::cout << "Anio: " << anio << std::endl;
-        std::cout << "Km: " << kilometraje << std::endl;
-    };
+    // Función para imprimir
+    void Imprimir() const;
 
 private:
     std::string marca;
     std::string duenio;
     std::string modelo;
-
     int anio;
     float kilometraje;
-
 };
 
+#endif // COCHE_H
 
-#endif //Alex_COCHE_H
+
 
 
 

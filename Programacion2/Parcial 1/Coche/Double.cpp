@@ -1,119 +1,144 @@
-
+#include <cmath>
 #include "Double.h"
 
-//Constructor Implícito
-Double::Double(){
-    this-> value = 0;
-}
-//Constructor Explícito por copia
-Double::Double(double value){
-    this-> value=value;
-}
-//Constructor Explícito por Parámetros
-Double::Double(const Double &rhs){
-    value= rhs.value;
+Double::Double() {
+    value = 0;
 }
 
-//Sobrecarga de operador "="
-Double &Double::operator= (const Double &rhs){
-    this->value = rhs.value;
+Double::Double(double value) {
+    this->value = value;
+}
+
+Double::Double(const Double &rhs) {
+    value = rhs.value;
+}
+
+Double &Double::operator=(const Double &rhs) {
+    if (this != &rhs) {
+        value = rhs.value;
+    }
     return *this;
 }
-Double &Double::operator= (double i){
-    this->value = i;
+
+Double &Double::operator=(double i) {
+    value = i;
     return *this;
 }
-//Sobrecarga de operador "+"
-Double &Double::operator+ (const Double &rhs){
-    this->value = rhs.value;
+
+Double &Double::operator+(const Double &rhs) {
+    value += rhs.value;
     return *this;
 }
-Double &Double::operator+ (double i){
-    this->value = i;
+
+Double &Double::operator+(double i) {
+    value += i;
     return *this;
 }
-//Sobrecarga de operador "-"
-Double &Double::operator- (const Double &rhs){
-    this->value = rhs.value;
+
+Double &Double::operator-(const Double &rhs) {
+    value -= rhs.value;
     return *this;
 }
-Double &Double::operator- (double i){
-    this->value = i;
+
+Double &Double::operator-(double i) {
+    value -= i;
     return *this;
 }
-//Sobrecarga de operador *
-Double &Double::operator* (Double &rhs){
-    this->value = rhs.value;
+
+Double &Double::operator*(const Double &rhs) {
+    value *= rhs.value;
     return *this;
 }
-Double &Double::operator* (double i){
-    this->value = i;
+
+Double &Double::operator*(double i) {
+    value *= i;
     return *this;
 }
-//Sobrecarga de operador /
-Double &Double::operator/ (Double &rhs){
-    this->value = rhs.value;
+
+Double &Double::operator/(const Double &rhs) {
+    if (rhs.value != 0) {
+        value /= rhs.value;
+    } else {
+        // Manejo de división por cero
+        value = 0;
+    }
     return *this;
 }
-Double &Double::operator/ (double i){
-    this->value = i;
+
+Double &Double::operator/(double i) {
+    if (i != 0) {
+        value /= i;
+    } else {
+        // Manejo de división por cero
+        value = 0;
+    }
     return *this;
 }
-//Sobrecarga de operador %
-Double &Double::operator% (Double &rhs){
-    this->value = rhs.value;
+
+Double &Double::operator%(const Double &rhs) {
+    if (rhs.value != 0) {
+        value = fmod(value, rhs.value);
+    } else {
+        // Manejo de división por cero
+        value = 0;
+    }
     return *this;
 }
-Double &Double::operator% (double i){
-    this->value = i;
+
+Double &Double::operator%(double i) {
+    if (i != 0) {
+        value = fmod(value, i);
+    } else {
+        // Manejo de división por cero
+        value = 0;
+    }
     return *this;
 }
-//Sobrecarga de Operadores de comparacion ">,<,==,=>,=<,!="
-Double &Double::operator> (Double &rhs){
-    this->value = rhs.value;
-    return *this;
+
+bool Double::operator>(const Double &rhs) const {
+    return value > rhs.value;
 }
-Double &Double::operator> (bool i){
-    this->value = i;
-    return *this;
+
+bool Double::operator>(double i) const {
+    return value > i;
 }
-Double &Double::operator< (Double &rhs){
-    this->value = rhs.value;
-    return *this;
+
+bool Double::operator<(const Double &rhs) const {
+    return value < rhs.value;
 }
-Double &Double::operator< (bool i){
-    this->value = i;
-    return *this;
+
+bool Double::operator<(double i) const {
+    return value < i;
 }
-Double &Double::operator== (Double &rhs){
-    this->value = rhs.value;
-    return *this;
+
+bool Double::operator==(const Double &rhs) const {
+    return value == rhs.value;
 }
-Double &Double::operator== (bool i){
-    this->value = i;
-    return *this;
+
+bool Double::operator==(double i) const {
+    return value == i;
 }
-Double &Double::operator>= (Double &rhs){
-    this->value = rhs.value;
-    return *this;
+
+bool Double::operator>=(const Double &rhs) const {
+    return value >= rhs.value;
 }
-Double &Double::operator>= (bool i){
-    this->value = i;
-    return *this;
+
+bool Double::operator>=(double i) const {
+    return value >= i;
 }
-Double &Double::operator<= (Double &rhs){
-    this->value = rhs.value;
-    return *this;
+
+bool Double::operator<=(const Double &rhs) const {
+    return value <= rhs.value;
 }
-Double &Double::operator<= (bool i){
-    this->value = i;
-    return *this;
+
+bool Double::operator<=(double i) const {
+    return value <= i;
 }
-Double &Double::operator!= (Double &rhs){
-    this->value = rhs.value;
-    return *this;
+
+bool Double::operator!=(const Double &rhs) const {
+    return value != rhs.value;
 }
-Double &Double::operator!= (bool i){
-    this->value = i;
-    return *this;
+
+bool Double::operator!=(double i) const {
+    return value != i;
 }

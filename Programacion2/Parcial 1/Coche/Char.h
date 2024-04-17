@@ -1,61 +1,35 @@
-//
-// Created by memop on 12/04/2024.
-//
 
-#ifndef HERENCIA_CHAR_H
-#define HERENCIA_CHAR_H
 
+#ifndef COCHE_CHAR_H
+#define COCHE_CHAR_H
 
 
 class Char {
+private:
+    char value; // Valor del carácter
 
 public:
+    // Constructores
+    Char(); // Constructor predeterminado
+    Char(char value); // Constructor con un valor inicial
+    Char(const Char &rhs); // Constructor de copia
 
-    Char();//Default constructor
-    Char(const Char &Char);// Copy constructor
-    explicit Char(char value);//Parameters constructor
-    ~Char() = default;//Destructor
+    // Sobrecarga de operadores
+    Char &operator=(const Char &rhs); // Operador de asignación
+    Char &operator=(char i); // Operador de asignación para char
+    Char operator+(const Char &rhs) const; // Operador de suma
+    Char operator+(char i) const; // Operador de suma para char
+    Char operator-(const Char &rhs) const; // Operador de resta
+    Char operator-(char i) const; // Operador de resta para char
+    bool operator==(const Char &rhs) const; // Operador de igualdad
+    bool operator==(char i) const; // Operador de igualdad para char
 
-//Operadores de asignación =
-    Char &operator= (const Char &rhs);
-    Char &operator= (char i);
-//Operadores de asignación +
-    Char &operator+ (const Char &rhs);
-    Char &operator+ (char i);
-//Operadores de asignación -
-    Char &operator- (const Char &rhs);
-    Char &operator- (char i);
-//Operadores de asignación *
-    Char &operator* (Char &rhs);
-    Char &operator* (char i);
-//Operadores de asignación /
-    Char &operator/ (Char &rhs);
-    Char &operator/ (char i);
-//Operadores de asignación %
-    Char &operator% (Char &rhs);
-    Char &operator% (char i);
-//Operadores de comparacion ">,<,==,=>,=<,!="
-    Char &operator> (Char &rhs);
-    Char &operator> (bool i);
-
-    Char &operator< (Char &rhs);
-    Char &operator< (bool i);
-
-    Char &operator== (Char &rhs);
-    Char &operator== (bool i);
-
-    Char &operator>= (Char &rhs);
-    Char &operator>= (bool i);
-
-    Char &operator<= (Char &rhs);
-    Char &operator<= (bool i);
-
-    Char &operator!= (Char &rhs);
-    Char &operator!= (bool i);
-
-private:
-
-    char value;
-
+    // Método para obtener el valor del carácter
+    char getValue() const;
 };
-#endif //HERENCIA_CHAR_H
+
+
+
+
+
+#endif // COCHE_CHAR_H

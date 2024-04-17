@@ -1,30 +1,28 @@
 #include "Coche.h"
 #include <iostream>
-#include "Float.h"
-#include <string>
+
 
 int main() {
+    // Crear un objeto Coche usando el constructor con parámetros
+    Coche miCoche("Toyota", "Juan", "Corolla", 2022, 10000.5);
 
-    int a,b,c,d,e,f;
+    // Imprimir los detalles del coche
+    std::cout << "Detalles del coche:" << std::endl;
+    miCoche.Imprimir();
 
-    std::cout << &a << " " << &b << " " << &c << " " << std::endl;
+    // Crear otro objeto Coche usando el constructor de copia
+    Coche otroCoche = miCoche;
 
-    Coche c1{};
-    Coche c2("Ford", "Elpepe", "Yaris", 2005, 2000);
-    Coche c3;
+    // Modificar el otro coche
+    otroCoche = Coche("Ford", "Pedro", "Fiesta", 2021, 8000.75);
 
-    c2 = c3;
-
-    c1.Imprimir();
-    c2.Imprimir();
-    c3.Imprimir();
-
-    FloatCell d1{};
-    FloatCell d2(17);
-
-
-
-
+    // Imprimir los detalles del otro coche
+    std::cout << "Detalles del otro coche:" << std::endl;
+    otroCoche.Imprimir();
 
     return 0;
 }
+
+
+
+

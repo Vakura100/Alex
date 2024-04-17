@@ -6,74 +6,74 @@
 #include "int.h"
 #include "int.h"
 //Constructor Implícito
-IntCell::IntCell(){
+Int::Int(){
     this-> value =0;
 };
 //Constructor Explícito por copia
-IntCell::IntCell(int value){
+Int::IntCell(int value){
     this-> value=value;
 };
 //Constructor Explícito por Parámetros
-IntCell::IntCell(const IntCell &rhs){
+Int::Int(const Int &rhs){
     value= rhs.value;
 };
 //Sobrecarga de operador "="
-IntCell &IntCell::operator = (const IntCell &rhs){
+Int &Int::operator = (const Int &rhs){
     this->value = rhs.value;
     return *this;
 }
-IntCell &IntCell::operator= (int i){
+Int &Int::operator= (int i){
     this->value = i;
     return *this;
 }
 
 //Sobrecarga de operador "+"
-IntCell &IntCell::operator+ (const IntCell &rhs){
+Int &Int::operator+ (const Int &rhs){
     this->value = rhs.value;
     return *this;
 }
-IntCell &IntCell::operator+ (int i){
+Int &Int::operator+ (int i){
     this->value = i;
     return *this;
 }
 
 //Sobrecarga de operador "-"
-IntCell &IntCell::operator- (const IntCell &rhs){
+Int &Int::operator- (const Int &rhs){
     this->value = rhs.value;
     return *this;
 }
-IntCell &IntCell::operator- (int i){
+Int &Int::operator- (int i){
     this->value = i;
     return *this;
 }
 
 //Sobrecarga de operador *
-IntCell &IntCell::operator* (IntCell &rhs){
+Int &Int::operator* (Int &rhs){
     this->value = rhs.value;
     return *this;
 }
-IntCell &IntCell::operator* (int i){
+Int &Int::operator* (int i){
     this->value = i;
     return *this;
 }
 
 //Sobrecarga de operador /
-IntCell &IntCell::operator/ (IntCell &rhs){
+Int &Int::operator/ (Int &rhs){
     this->value = rhs.value;
     return *this;
 }
-IntCell &IntCell::operator/ (int i){
+Int &Int::operator/ (int i){
     this->value = i;
     return *this;
 }
 
 //Sobrecarga de operador %
-IntCell &IntCell::operator% (IntCell &rhs){
+Int &Int::operator% (Int &rhs){
     this->value = rhs.value;
     return *this;
 
 }
-IntCell &IntCell::operator% (int i) {
+Int &Int::operator% (int i) {
     this->value = i;
     return *this;
 }
