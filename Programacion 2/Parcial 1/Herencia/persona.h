@@ -30,7 +30,6 @@ public:
     float getpeso() const;
     void setpeso(float peso);
 
-private:
 
     std::string genero;
     std::string nombre;
