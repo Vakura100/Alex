@@ -8,4 +8,6 @@ add_executable(Herencia main.cpp
         int.cpp
         ninja.cpp
         persona.cpp
-        zanin.cpp)
+        zanin.cpp
+        Hokage.cpp
+        Genin.cpp)

@@ -1,45 +1,45 @@
-#ifndef HERENCIA_PERSONA_H
-#define HERENCIA_PERSONA_H
+#ifndef PERSONA_H
+#define PERSONA_H
 
 
-#include <Iostream>
 #include <string>
+#include "int.h"
+
+
 
 class persona {
-
 public:
 
     persona() = default;//Default constructor
     persona(const persona &persona);// Copy constructor
-    persona(std::string gender, std::string name, int age, float height, float weight);//Parameters    constructor
+    persona(std::string genero, std::string nombre, int edad, float altura, float peso);
     ~persona() = default;//Destructor
 
-    std::string getGender() const;
-    void setGender(std::string gender);
+    std::string getgenero() const;
+    void setgener(std::string genero);
 
-    std::string getName() const;
-    void setName(std::string name);
+    std::string getnombre() const;
+    void setnombre(std::string nombre);
 
-    int getAge() const;
-    void setAge(int Age);
+    int getedad() const;
+    void setedad(int edad);
 
-    float getHeight() const;
-    void setHeight(float height);
+    float getaltura() const;
+    void setaltura(float altura);
 
-    float getWeight() const;
-    void setWeight(float weight);
+    float getpeso() const;
+    void setpeso(float peso);
 
 private:
 
-    std::string gender;
-    std::string name;
-    int age;
-    float height;
-    float weight;
+    std::string genero;
+    std::string nombre;
+    int edad;
+    float altura;
+    float peso;
 };
 
+#endif PERSONA_H
 
 
-
-#endif HERENCIA_PERSONA_H
 

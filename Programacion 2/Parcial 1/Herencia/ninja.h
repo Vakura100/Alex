@@ -8,11 +8,11 @@
 class ninja :public persona{
 public:
 
-    ninja();
-    ninja(int edad,float height,float weight,std::string bloodtype,std::string);
+    ninja() = default;
 
-    ninja(std::string gender, std::string name, int age, float height, float weight, std::string aldea,
-          std::string tChakra, int nvlChakra);
+    ninja(const std::string &nombre, const std::string &genero, int edad, float altura, float peso,
+          const std::string &chakra, const std::string &aldea, const std::string  &clan);
+
 
     ninja(const ninja& ninja);
 

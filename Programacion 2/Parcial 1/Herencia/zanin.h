@@ -1,14 +1,14 @@
 #ifndef HERENCIA_ZANIN_H
 #define HERENCIA_ZANIN_H
 
-
 #include "persona.h"
 #include <string>
 
-class zanin :public persona{
+class zanin :
+        public Genin{
 public:
 
-    zanin();
+    zanin() = default;
     zanin(int edad,float height,float weight,std::string bloodtype,std::string);
 
     zanin(std::string gender, std::string name, int age, float height, float weight, std::string aldea,

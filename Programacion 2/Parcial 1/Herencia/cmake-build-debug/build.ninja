@@ -73,8 +73,20 @@ build CMakeFiles/Herencia.dir/persona.cpp.obj: CXX_COMPILER__Herencia_unscanned_
   OBJECT_DIR = CMakeFiles\Herencia.dir
   OBJECT_FILE_DIR = CMakeFiles\Herencia.dir
 
-build CMakeFiles/Herencia.dir/zanin.cpp.obj: CXX_COMPILER__Herencia_unscanned_Debug C$:/Users/memop/CLionProjects/Programacion$ 2/Parcial$ 1/Herencia/zanin.cpp || cmake_object_order_depends_target_Herencia
-  DEP_FILE = CMakeFiles\Herencia.dir\zanin.cpp.obj.d
+build CMakeFiles/Herencia.dir/Zanin.cpp.obj: CXX_COMPILER__Herencia_unscanned_Debug C$:/Users/memop/CLionProjects/Programacion$ 2/Parcial$ 1/Herencia/Zanin.cpp || cmake_object_order_depends_target_Herencia
+  DEP_FILE = CMakeFiles\Herencia.dir\Zanin.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Herencia.dir
+  OBJECT_FILE_DIR = CMakeFiles\Herencia.dir
+
+build CMakeFiles/Herencia.dir/Hokage.cpp.obj: CXX_COMPILER__Herencia_unscanned_Debug C$:/Users/memop/CLionProjects/Programacion$ 2/Parcial$ 1/Herencia/Hokage.cpp || cmake_object_order_depends_target_Herencia
+  DEP_FILE = CMakeFiles\Herencia.dir\Hokage.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Herencia.dir
+  OBJECT_FILE_DIR = CMakeFiles\Herencia.dir
+
+build CMakeFiles/Herencia.dir/Genin.cpp.obj: CXX_COMPILER__Herencia_unscanned_Debug C$:/Users/memop/CLionProjects/Programacion$ 2/Parcial$ 1/Herencia/Genin.cpp || cmake_object_order_depends_target_Herencia
+  DEP_FILE = CMakeFiles\Herencia.dir\Genin.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Herencia.dir
   OBJECT_FILE_DIR = CMakeFiles\Herencia.dir
@@ -87,7 +99,7 @@ build CMakeFiles/Herencia.dir/zanin.cpp.obj: CXX_COMPILER__Herencia_unscanned_De
 #############################################
 # Link the executable Herencia.exe
 
-build Herencia.exe: CXX_EXECUTABLE_LINKER__Herencia_Debug CMakeFiles/Herencia.dir/main.cpp.obj CMakeFiles/Herencia.dir/int.cpp.obj CMakeFiles/Herencia.dir/ninja.cpp.obj CMakeFiles/Herencia.dir/persona.cpp.obj CMakeFiles/Herencia.dir/zanin.cpp.obj
+build Herencia.exe: CXX_EXECUTABLE_LINKER__Herencia_Debug CMakeFiles/Herencia.dir/main.cpp.obj CMakeFiles/Herencia.dir/int.cpp.obj CMakeFiles/Herencia.dir/ninja.cpp.obj CMakeFiles/Herencia.dir/persona.cpp.obj CMakeFiles/Herencia.dir/Zanin.cpp.obj CMakeFiles/Herencia.dir/Hokage.cpp.obj CMakeFiles/Herencia.dir/Genin.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Herencia.dir

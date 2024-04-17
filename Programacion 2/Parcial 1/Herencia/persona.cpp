@@ -1,30 +1,31 @@
 
 
 #include "persona.h"
-#include "persona.h"
+#include "string"
 
 persona::persona(const persona &rhs){
-    gender = rhs.gender;
-    name = rhs.name;
-    age = rhs.age;
-    height = rhs.height;
-    weight = rhs.weight;
+    genero = rhs.genero;
+    nombre = rhs.nombre;
+    edad = rhs.edad;
+    altura = rhs.altura;
+    peso = rhs.peso;
 
 }
 
-persona::persona(std::string gender, std::string name, int age, float height, float weight){
-    this-> gender = gender;
-    this-> name = name;
-    this-> age = age;
-    this-> height = height;
-    this-> weight = weight;
+persona(std::string genero, std::string nombre, int edad, float altura, float peso);
+
+    this-> genero = genero;
+    this-> nombre = nombre;
+    this-> edad = edad;
+    this-> altura = altura;
+    this-> pesot = peso;
 }
 
 std::string persona::getGender() const {
-    return gender;
+    return genero;
 }
 void persona::setGender(std::string gender) {
-    this-> gender = gender;
+    this-> genero = genero;
 }
 
 std::string persona::getName() const {

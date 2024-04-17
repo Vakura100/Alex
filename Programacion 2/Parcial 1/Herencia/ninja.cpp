@@ -3,10 +3,9 @@
 #include "ninja.h"
 
 
-ninja::ninja(std::string gender, std::string name, int age, float height, float weight, std::string aldea, std::string tChakra, int nvlChakra){
-    this-> aldea = aldea;
-    this-> tChakra = tChakra;
-    this-> nvlChakra = nvlChakra;
+ninja::ninja(const std::string &nombre, const std::string &genero, int edad, float estatura, float peso,
+             const std::string &chakra, const std::string &aldea, const std::string  &clan)
+             : persona(std::string genero, std::string nombre, int edad, float altura, float peso);
 }
 
 ninja::ninja(const ninja &rhs):persona(rhs){
